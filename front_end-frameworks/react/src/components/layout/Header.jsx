@@ -25,9 +25,11 @@ function Header() {
 							<a className="hover:text-slate-50" href="#contact-section">Contact</a>
 						</li>
 
-						<Button href="#Enroll-now" className="px-4 py-2 rounded-md shadow-lg shadow-violet-500/40">
-							Enroll now
-						</Button>
+						<li>
+							<Button href="#contact-section" className="px-4 py-2 rounded-md shadow-lg shadow-violet-500/40">
+								Enroll now
+							</Button>
+						</li>
 					</ul>
 				</nav>
 			</div>
