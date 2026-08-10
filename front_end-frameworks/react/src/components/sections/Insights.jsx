@@ -13,7 +13,7 @@ function Insights() {
 			try {
 				const res = await getInsights()
 				setInsights(res)
-			} catch (err) {
+			} catch {
 				setError("loading insights error")
 			}
 		}
@@ -30,7 +30,7 @@ function Insights() {
 			<div className="w-full max-w-6xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
 				{insights.map((insight, index) => (
 					<InsightCard
-						key={index}
+						key={insight.title}
 						category={insight.category}
 						title={insight.title}
 						description={insight.description}
