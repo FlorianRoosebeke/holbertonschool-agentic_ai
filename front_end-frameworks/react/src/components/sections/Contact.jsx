@@ -52,9 +52,9 @@ function Contact() {
 					<Button href="https://www.holbertonschool.fr/admission" target="_blank" rel="noopener noreferrer" variant="secondary" className="px-4 py-2 rounded-md text-violet-50 transition shadow-lg shadow-slate-950/40">Need more information?</Button>
 				</div>
 				<ul className="flex flex-wrap justify-center items-center gap-y-2">
-					{highlights.map((highlight, index) => (
+					{highlights.map((highlight) => (
 						<HighlightCard
-							key={index}
+							key={highlight.label}
 							Icon={highlight.icon}
 							label={highlight.label}
 						/>
