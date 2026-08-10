@@ -1,18 +1,19 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import { Sparkles } from 'lucide-vue-next';
-
+import Header from "./components/layout/Header.vue";
+import Hero from "./components/sections/Hero.vue";
+import About from "./components/sections/About.vue";
+import Features from "./components/sections/Features.vue";
+import Insights from "./components/sections/Insights.vue";
+import Contact from "./components/sections/Contact.vue";
+import Footer from "./components/layout/Footer.vue";
 </script>
 
 <template>
-  <div>
-    <main>
-      <h1 class="flex items-center gap-3 text-3xl font-bold text-gray-900"> Mon application Vue 3 + Tailwind</h1>
-      <Sparkles class="h-7 w-7 text-indigo-600" />
-      <span>
-        <h2 class="text-xl font-medium text-gray-700">Exemple avec H1, H2, une icône et un composant HelloWorld</h2>
-      </span>
-      <HelloWorld msg="Bienvenue dans HelloWorld" />
-    </main>
-  </div>
+	<Header />
+	<Hero />
+	<About />
+	<Features />
+	<Insights />
+	<Contact />
+	<Footer />
 </template>

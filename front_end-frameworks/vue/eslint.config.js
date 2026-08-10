@@ -19,4 +19,13 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   pluginVue.configs["flat/essential"],
+  {
+    files: ["**/*.vue"],
+    rules: {
+      // Layout and section components intentionally mirror the React version
+      // file for file (Header, Hero, About, Contact...), so single-word names
+      // are kept to preserve the 1:1 mapping with the original project.
+      "vue/multi-word-component-names": "off",
+    },
+  },
 ]);
