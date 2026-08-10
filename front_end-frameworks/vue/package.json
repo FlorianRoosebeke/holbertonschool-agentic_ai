@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
     "fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh-pages-vue"
+    "deploy": "gh-pages -d dist -b gh-pages --dest vue"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
