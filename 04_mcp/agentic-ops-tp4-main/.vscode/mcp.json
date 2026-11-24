@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "crm-server": {
+      "type": "stdio",
+      "command": "/usr/bin/env",
+      "args": [
+        "node",
+        "/home/admin/Florian/holbertonschool-agentic_ai/04_mcp/agentic-ops-tp4-main/mcp_server.js"
+      ]
+    }
+  }
+}

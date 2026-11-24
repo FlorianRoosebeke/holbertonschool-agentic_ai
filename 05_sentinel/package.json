@@ -1,0 +1,13 @@
+{
+  "name": "sentinel-github-ops-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing fetch_github_issues (5 latest issues of a GitHub repo)",
+  "type": "module",
+  "main": "mcp_server.js",
+  "scripts": {
+    "start": "node mcp_server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  }
+}

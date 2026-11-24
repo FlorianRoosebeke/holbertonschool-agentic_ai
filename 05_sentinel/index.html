@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tableau de bord des cinq dernières issues du dépôt microsoft/vscode."
+    />
+    <title>Issues VS Code — Sentinel</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./dashboard.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navigation principale">
+        <a class="brand" href="#" aria-label="Sentinel, accueil">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>sentinel<span class="brand-period">.</span></span>
+        </a>
+
+        <p class="nav-label">ESPACE DE TRAVAIL</p>
+        <nav>
+          <a class="nav-item nav-item-active" href="#issues" aria-current="page">
+            <span class="nav-icon" aria-hidden="true">▦</span>
+            Issues
+            <span class="nav-count" id="sidebar-count">5</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Source GitHub</span>
+          <span class="sidebar-repo">API</span>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb">
+            <span>Repositories</span>
+            <span class="breadcrumb-separator" aria-hidden="true">/</span>
+            <strong>microsoft / vscode</strong>
+          </div>
+          <a
+            class="github-link"
+            href="https://github.com/microsoft/vscode/issues"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir sur GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </header>
+
+        <section class="page-heading" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow"><span class="live-dot"></span> SNAPSHOT GITHUB</p>
+            <h1 id="page-title">Issues du projet</h1>
+            <p class="page-description">
+              Les cinq issues les plus récemment créées dans
+              <span class="repo-name">microsoft/vscode</span>.
+            </p>
+          </div>
+          <a
+            class="repo-badge"
+            href="https://github.com/microsoft/vscode"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dépôt microsoft/vscode sur GitHub"
+          >
+            <span class="repo-icon" aria-hidden="true">⌘</span>
+            <span><strong>microsoft</strong><small>vscode</small></span>
+            <span class="external-icon" aria-hidden="true">↗</span>
+          </a>
+        </section>
+
+        <section class="stats-grid" aria-label="Résumé des issues">
+          <article class="stat-card">
+            <div class="stat-topline">
+              <span class="stat-label">Issues récupérées</span>
+              <span class="stat-icon stat-icon-violet" aria-hidden="true">▤</span>
+            </div>
+            <strong class="stat-value" id="total-count">5</strong>
+            <span class="stat-footnote">5 plus récentes</span>
+          </article>
+          <article class="stat-card">
+            <div class="stat-topline">
+              <span class="stat-label">Ouvertes</span>
+              <span class="stat-icon stat-icon-green" aria-hidden="true">◉</span>
+            </div>
+            <strong class="stat-value" id="open-count">5</strong>
+            <span class="stat-footnote"><span class="mini-dot"></span> En cours de suivi</span>
+          </article>
+          <article class="stat-card">
+            <div class="stat-topline">
+              <span class="stat-label">Fermées</span>
+              <span class="stat-icon stat-icon-gray" aria-hidden="true">✓</span>
+            </div>
+            <strong class="stat-value" id="closed-count">0</strong>
+            <span class="stat-footnote">Dans cet échantillon</span>
+          </article>
+          <article class="stat-card stat-card-highlight">
+            <div class="stat-topline">
+              <span class="stat-label">Signalements récents</span>
+              <span class="stat-icon stat-icon-blue" aria-hidden="true">↗</span>
+            </div>
+            <strong class="stat-value">
+              <span id="latest-day">24</span>
+              <span class="stat-suffix" id="latest-month">nov.</span>
+            </strong>
+            <span class="stat-footnote">Dernière issue créée</span>
+          </article>
+        </section>
+
+        <section class="issues-section" id="issues" aria-labelledby="issues-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="issues-title">Issues récentes</h2>
+              <p>Consultez et filtrez les signalements du dépôt.</p>
+            </div>
+            <span class="data-source"><span class="source-dot"></span> Données MCP</span>
+          </div>
+
+          <div class="toolbar">
+            <label class="search-box">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <span class="visually-hidden">Rechercher une issue</span>
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Rechercher par titre, numéro ou sujet…"
+                autocomplete="off"
+              />
+              <kbd>/</kbd>
+            </label>
+
+            <div class="filter-group" role="group" aria-label="Filtrer par statut">
+              <button class="filter-button is-selected" type="button" data-filter="all" aria-pressed="true">
+                Toutes <span id="all-filter-count">5</span>
+              </button>
+              <button class="filter-button" type="button" data-filter="open" aria-pressed="false">
+                Ouvertes <span id="open-filter-count">5</span>
+              </button>
+              <button class="filter-button" type="button" data-filter="closed" aria-pressed="false">
+                Fermées <span id="closed-filter-count">0</span>
+              </button>
+            </div>
+
+            <label class="sort-control">
+              <span class="visually-hidden">Trier les issues</span>
+              <select id="sort-select">
+                <option value="newest">Plus récentes</option>
+                <option value="oldest">Plus anciennes</option>
+                <option value="number">Numéro d’issue</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="issue-list" id="issue-list" aria-live="polite"></div>
+          <p class="results-count" id="results-count"></p>
+        </section>
+
+        <footer class="page-footer">
+          <span>Sentinel <span aria-hidden="true">·</span> Dashboard de tri</span>
+          <span>Issues publiques de <a href="https://github.com/microsoft/vscode" target="_blank" rel="noopener noreferrer">microsoft/vscode</a></span>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

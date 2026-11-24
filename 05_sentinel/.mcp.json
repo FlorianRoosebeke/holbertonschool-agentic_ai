@@ -1,0 +1,15 @@
+{
+	"mcpServers": {
+		"github-ops": {
+			"type": "stdio",
+			"command": "node",
+			"args": [
+				"--env-file=/home/admin/Florian/holbertonschool-agentic_ai/05_sentinel/.env",
+				"/home/admin/Florian/holbertonschool-agentic_ai/05_sentinel/mcp_server.js"
+			],
+			"tools": [
+				"*"
+			]
+		}
+	}
+}
